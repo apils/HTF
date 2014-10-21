@@ -3,9 +3,9 @@
     
     var controllerId = 'shell';
     angular.module('app').controller(controllerId,
-        ['$rootScope', 'common', 'config', shell]);
+        ['$rootScope', '$scope','common', 'config', shell]);
 
-    function shell($rootScope, common, config) {
+    function shell($rootScope, $scope, common, config) {
         var vm = this;
         var logSuccess = common.logger.getLogFn(controllerId, 'success');
         var events = config.events;
@@ -21,26 +21,41 @@
             trail: 100,
             color: '#F58A00'
         };
+        vm.navbarCollapsed = getNavbarCollapsed;
+		vm.toggleNavbar = toggleNavbar;
 
-        activate();
+	    activate();
 
-        function activate() {
+	    return vm;
+
+	    function activate() {
+
+	    	$rootScope.$on('$routeChangeStart',
+				function (event, next, current) { toggleSpinner(true); }
+			);
+
+	    	$rootScope.$on(events.controllerActivateSuccess,
+				function (data) { toggleSpinner(false); }
+			);
+
+	    	$rootScope.$on(events.spinnerToggle,
+				function (data) { toggleSpinner(data.show); }
+			);
+
             logSuccess('Hot Towel Angular loaded!', null, true);
             common.activateController([], controllerId);
         }
 
         function toggleSpinner(on) { vm.isBusy = on; }
 
-        $rootScope.$on('$routeChangeStart',
-            function (event, next, current) { toggleSpinner(true); }
-        );
-        
-        $rootScope.$on(events.controllerActivateSuccess,
-            function (data) { toggleSpinner(false); }
-        );
+        function getNavbarCollapsed() {
+	        return config.navbarCollapsed;
+        }
 
-        $rootScope.$on(events.spinnerToggle,
-            function (data) { toggleSpinner(data.show); }
-        );
+        function toggleNavbar() {
+        	//logSuccess('Toggle Navbar 123!', null, true);
+        	vm.navbarCollapsed = !vm.navbarCollapsed;
+        	config.navbarCollapsed = vm.navbarCollapsed;
+        };
     };
 })();

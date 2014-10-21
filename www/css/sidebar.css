@@ -1,0 +1,58 @@
+﻿/* Sidebar fixed left*/
+.view-content {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.sidebar.hiddenleft{
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: -1000px;
+	width: 0;
+    -webkit-transition: width 0.3s ease 0, left 0 linear 0.3s, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
+    transition: width 0.3s ease 0, left 0 linear 0.3s, transform 0.3s;
+}
+
+.sidebar {
+	position: absolute;
+	overflow-x: hidden;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	width: 250px;
+	z-index: 100;
+	background-color: #cecece;
+	transition-property: width;
+	transition-duration: .3s;
+	transition-timing-function: ease;
+	/* For Safari 3.1 to 6.0 */
+    -webkit-transition-property: width;
+    -webkit-transition-duration: .3s;
+    -webkit-transition-timing-function: ease;
+}
+
+.sidebar-nav { width: 250px; }
+
+@media(min-width:768px) {
+	.sidebar {
+		left: 0;
+		width: 250px;
+	}
+
+	.sidebar.hiddenleft{
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		width: 250px;
+		background-color: #cecece;
+	}
+	.view-content {
+		left: 250px;
+	}
+}
+/* End Sidebar fixed nav*/

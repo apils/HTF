@@ -6,16 +6,23 @@
         ['$route', 'config', 'routes', sidebar]);
 
     function sidebar($route, config, routes) {
-        var vm = this;
-
-        vm.isCurrent = isCurrent;
+        var sb = this;
+        sb.isCurrent = isCurrent;
+        sb.navbarCollapsed = getNavbarCollapsed;
 
         activate();
+        return sb;
 
-        function activate() { getNavRoutes(); }
+        function activate() {
+	         getNavRoutes();
+        }
         
+        function getNavbarCollapsed() {
+        	return config.navbarCollapsed;
+        }
+
         function getNavRoutes() {
-            vm.navRoutes = routes.filter(function(r) {
+        	sb.navRoutes = routes.filter(function (r) {
                 return r.config.settings && r.config.settings.nav;
             }).sort(function(r1, r2) {
                 return r1.config.settings.nav - r2.config.settings.nav;
