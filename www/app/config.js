@@ -9,8 +9,8 @@
     };
 
     var config = {
-        appErrorPrefix: '[HT Error] ', //Configure the exceptionHandler decorator
-        docTitle: 'HotTowel: ',
+        appErrorPrefix: '[FT Error] ', //Configure the exceptionHandler decorator
+        docTitle: 'FinanceTracker: ',
         events: events,
         version: '2.1.0'
     };

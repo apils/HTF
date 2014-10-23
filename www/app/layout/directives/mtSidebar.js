@@ -12,12 +12,14 @@
         var directive = {
             link: link,
             restrict: 'A',
-			templateUrl: 'app/layout/sidebar.html'
+			controller: 'sidebar',
+			controllerAs: 'sb',
+            templateUrl: 'app/layout/sidebar.html'
         };
         return directive;
 
         function link(scope, element, attrs) {
-        	$('#side-menu').metisMenu();
+
         }
     }
 

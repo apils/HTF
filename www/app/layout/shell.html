@@ -1,25 +1,10 @@
 ﻿<div data-ng-controller="shell as vm">
-    <!--<header class="clearfix">-->
-	<div data-ng-include="src='topnav.html'"></div>
-    <!--</header>-->
-	<section id="content" class="content">
-		<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
-			<div data-cc-spinner="vm.spinnerOptions"></div>
-			<div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
-		</div>
-
-		<div data-mt-sidebar></div>
-
-		<div data-ng-view class="shuffle-animation"></div>
-	</section>
-	
-	<div id="wrapper">
-
-		<!-- Navigation -->
-
-
-
-		<!-- /#page-wrapper -->
-
+	<section id="header" data-ng-include="src='app/layout/topnav.html'"></section>
+	<div data-mt-sidebar></div>
+	<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
+		<div data-cc-spinner="vm.spinnerOptions"></div>
+		<div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
 	</div>
+	<div data-ng-view class="view-content" ng-class="{'slide-right': vm.navbarOpen}"></div>
+	<section id="footer">Home Finances</section>
 </div>

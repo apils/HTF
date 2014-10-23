@@ -1,46 +1,36 @@
-﻿<div data-ng-controller="sidebar as vm">
-	<!--<div class="sidebar-filler"></div>
-		<div class="sidebar-dropdown"><a href="/">Menu</a></div>
-		<div class="sidebar-inner">
-			<div class="sidebar-widget">
+﻿	<div class="sidebar" role="navigation">
+		<div class="sidebar-search">
+			<div class="input-group custom-search-form">
+				<input type="text" class="form-control" placeholder="Search...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</span>
 			</div>
-			<ul class="navi">
-				<li class="nlightblue fade-selection-animation" data-ng-class="vm.isCurrent(r)"
-				    data-ng-repeat="r in vm.navRoutes">
-					<a href="#{{r.url}}" data-ng-bind-html="r.config.settings.content"></a>
-				</li>
-			</ul>
-		</div>-->
-
-	<!--<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">-->
-		<div class="navbar-default sidebar" role="navigation">
-			<div class="sidebar-nav navbar-collapse">
+			<!-- /input-group -->
+		</div>
+		<div class="scrollable-menu">
+			<div class="sidebar-nav">
 				<ul class="nav" id="side-menu">
-					<li class="sidebar-search">
-						<div class="input-group custom-search-form">
-							<input type="text" class="form-control" placeholder="Search...">
-							<span class="input-group-btn">
-								<button class="btn btn-default" type="button">
-									<i class="fa fa-search"></i>
-								</button>
-							</span>
-						</div>
-						<!-- /input-group -->
-					</li>
+
 					<li>
 						<a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level">
+						<a href="#">
+							<i class="fa fa-bar-chart-o fa-fw"></i> Charts
+							<!--<span class="fa arrow"></span>-->
+						</a>
+						<!--<ul class="nav nav-second-level">
 							<li>
 								<a href="flot.html">Flot Charts</a>
 							</li>
 							<li>
 								<a href="morris.html">Morris.js Charts</a>
 							</li>
-						</ul>
-						<!-- /.nav-second-level -->
+						</ul>-->
+						<!--/.nav-second-level-->
 					</li>
 					<li>
 						<a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
@@ -49,8 +39,11 @@
 						<a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
 					</li>
 					<li>
-						<a href="/"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level">
+						<a href="/">
+							<i class="fa fa-wrench fa-fw"></i> UI Elements
+							<!--<span class="fa arrow"></span>-->
+						</a>
+						<!--<ul class="nav nav-second-level">
 							<li>
 								<a href="panels-wells.html">Panels and Wells</a>
 							</li>
@@ -66,12 +59,15 @@
 							<li>
 								<a href="grid.html">Grid</a>
 							</li>
-						</ul>
+						</ul>-->
 						<!-- /.nav-second-level -->
 					</li>
 					<li>
-						<a href="/"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level">
+						<a href="/">
+							<i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown
+							<!--<span class="fa arrow"></span>-->
+						</a>
+						<!--<ul class="nav nav-second-level">
 							<li>
 								<a href="/">Second Level Item</a>
 							</li>
@@ -94,27 +90,20 @@
 										<a href="/">Third Level Item</a>
 									</li>
 								</ul>
-								<!-- /.nav-third-level -->
+								/.nav-third-level
 							</li>
-						</ul>
+						</ul>-->
 						<!-- /.nav-second-level -->
 					</li>
 					<li>
-						<a href="/"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-						<ul class="nav nav-second-level">
-							<li>
-								<a href="blank.html">Blank Page</a>
-							</li>
-							<li>
-								<a href="login.html">Login Page</a>
-							</li>
-						</ul>
-						<!-- /.nav-second-level -->
+						<a href="/">
+							<i class="fa fa-files-o fa-fw"></i> Sample Pages
+						</a>
 					</li>
 				</ul>
 			</div>
-			<!-- /.sidebar-collapse -->
 		</div>
-		<!-- /.navbar-static-side -->
+		<!-- /.sidebar-collapse -->
+	</div>
+	<!-- /.navbar-static-side -->
 	<!--</nav>-->
-</div>

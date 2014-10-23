@@ -1,0 +1,60 @@
+﻿/* Sidebar fixed left*/
+.view-content {
+	position: absolute;
+	bottom: 50px;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	z-index: 3;
+	overflow-y: auto; 
+	-ms-transform: translateX(0); /* IE 9 */
+   	-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
+    transform: translateX(0);
+    -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
+    transition: transform 0.3s ease 0, transform 0.3s;
+}
+
+.view-content.slide-right {
+	-ms-transform: translateX(250px); /* IE 9 */
+   	-webkit-transform: translateX(250px); /* Chrome, Safari, Opera */
+    transform: translateX(250px);
+    -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
+    transition: transform 0.3s ease 0, transform 0.3s;
+}
+
+.sidebar {
+	position: absolute;
+	overflow-x: hidden;
+	bottom: 51px;
+	top: 51px;
+	left: 0;
+	width: 250px;
+	background-color: #cecece;
+	z-index: 0;
+}
+
+.sidebar-nav { width: 250px; }
+
+.scrollable-menu { 
+	position: absolute;
+	top: 64px;
+	bottom: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+@media(min-width:768px) {
+	.view-content {
+		margin-left: 250px;
+		right: 0;
+		width: auto;
+	}
+	.view-content.slide-right {
+		-ms-transform: translateX(0); /* IE 9 */
+		-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
+		transform: translateX(0);
+		-webkit-transition: transform 0s ease 0, -webkit-transform 0s;  /* For Safari 3.1 to 6.0 */
+		transition: transform 0s ease 0, transform 0s;
+	}
+}
+/* End Sidebar fixed nav*/
