@@ -12,12 +12,6 @@
         var directive = {
             link: link,
             restrict: 'A',
-<<<<<<< HEAD
-=======
-			scope: {
-				navbarCollapsed : '='
-			},
->>>>>>> origin/master
 			controller: 'sidebar',
 			controllerAs: 'sb',
             templateUrl: 'app/layout/sidebar.html'

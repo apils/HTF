@@ -8,7 +8,6 @@
     function sidebar($route, config, routes) {
         var sb = this;
         sb.isCurrent = isCurrent;
-<<<<<<< HEAD
 
         activate();
         return sb;
@@ -17,21 +16,6 @@
 	         getNavRoutes();
         }
 
-=======
-        sb.navbarCollapsed = getNavbarCollapsed;
-
-        activate();
-        return sb;
-
-        function activate() {
-	         getNavRoutes();
-        }
-        
-        function getNavbarCollapsed() {
-        	return config.navbarCollapsed;
-        }
-
->>>>>>> origin/master
         function getNavRoutes() {
         	sb.navRoutes = routes.filter(function (r) {
                 return r.config.settings && r.config.settings.nav;

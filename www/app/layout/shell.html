@@ -1,5 +1,4 @@
 ﻿<div data-ng-controller="shell as vm">
-<<<<<<< HEAD
 	<section id="header" data-ng-include="src='app/layout/topnav.html'"></section>
 	<div data-mt-sidebar></div>
 	<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
@@ -8,20 +7,4 @@
 	</div>
 	<div data-ng-view class="view-content" ng-class="{'slide-right': vm.navbarOpen}"></div>
 	<section id="footer">Home Finances</section>
-=======
-	<section id="header">
-		<div data-ng-include="src='app/layout/topnav.html'"></div>
-	</section>
-	<section id="main">
-		<div data-ng-show="vm.isBusy" class="page-splash dissolve-animation">
-			<div data-cc-spinner="vm.spinnerOptions"></div>
-			<div class="page-splash-message page-splash-message-subtle">{{vm.busyMessage}}</div>
-		</div>
-		<div data-mt-sidebar></div>
-		<div data-ng-view class="view-content"></div>
-	</section>
-	<section id="footer">
-		Home Finances
-	</section>
->>>>>>> origin/master
 </div>

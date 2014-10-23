@@ -34,14 +34,11 @@ body {
 	overflow-y: scroll;
 }
 
-<<<<<<< HEAD
 .mainbar {
 	height: 100%;
 	width: 100%;
 }
 
-=======
->>>>>>> origin/master
 .navbar-inverse {
     background-color: #333;
 }
@@ -74,22 +71,11 @@ body {
         background-color: #333;
     }
 
-<<<<<<< HEAD
-=======
-.sidebar {
-    margin-top: -2px;
-}
-
->>>>>>> origin/master
     .sidebar .sidebar-inner {
         background-color: #333;
     }
 
-<<<<<<< HEAD
 /*.sidebar-filler {
-=======
-.sidebar-filler {
->>>>>>> origin/master
     z-index: -1;
     position: fixed;
     top: 0;
@@ -97,11 +83,7 @@ body {
     height: 100%;
     background-color: #333;
     width: 230px;
-<<<<<<< HEAD
 }*/
-=======
-}
->>>>>>> origin/master
 
 /*#endregion */
 
@@ -214,15 +196,9 @@ small {
     margin: 2px auto 8px auto !important;
 }
 
-<<<<<<< HEAD
 /*.fa-search {
     color: #FFFFFF;
 }*/
-=======
-.fa-search {
-    color: #FFFFFF;
-}
->>>>>>> origin/master
 
 .form-search {
     min-height: 2em;
