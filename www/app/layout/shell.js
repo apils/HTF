@@ -22,6 +22,7 @@
             trail: 100,
             color: '#F58A00'
         };
+<<<<<<< HEAD
         vm.navbarOpen = false;
 		vm.toggleNavbar = toggleNavbar;
 
@@ -31,6 +32,17 @@
 
 	    function activate() {
 
+=======
+        vm.navbarCollapsed = getNavbarCollapsed;
+		vm.toggleNavbar = toggleNavbar;
+
+	    activate();
+
+	    return vm;
+
+	    function activate() {
+
+>>>>>>> origin/master
 	    	$rootScope.$on('$routeChangeStart',
 				function (event, next, current) { toggleSpinner(true); }
 			);
@@ -49,9 +61,20 @@
 
         function toggleSpinner(on) { vm.isBusy = on; }
 
+<<<<<<< HEAD
         function toggleNavbar() {
         	//logSuccess('Toggle Navbar 123!', null, true);
         	vm.navbarOpen = !vm.navbarOpen;
+=======
+        function getNavbarCollapsed() {
+	        return config.navbarCollapsed;
+        }
+
+        function toggleNavbar() {
+        	//logSuccess('Toggle Navbar 123!', null, true);
+        	vm.navbarCollapsed = !vm.navbarCollapsed;
+        	config.navbarCollapsed = vm.navbarCollapsed;
+>>>>>>> origin/master
         };
     };
 })();

@@ -84,6 +84,7 @@
 
 
 	</head>
+<<<<<<< HEAD
 	<body style="overflow-x:hidden;">
 		<div id="splash-page" data-ng-show="false">
 			<div class="page-splash">
@@ -146,4 +147,69 @@
 		<script type="text/javascript" src="cordova.js"></script>
 
 	</body>
+=======
+<body>
+	<div data-ng-include="src='app/layout/shell.html'"></div>
+	<div id="splash-page" data-ng-show="false">
+		<div class="page-splash">
+			<div class="page-splash-message">
+				Finances Tracker
+			</div>
+			<div class="progress progress-striped active page-progress-bar">
+				<div class="bar"></div>
+			</div>
+		</div>
+	</div>
+	<toaster-container></toaster-container>
+
+	<!-- Vendor Scripts -->
+	<script src="scripts/jquery-2.1.1.min.js"></script>
+	<script src="scripts/angular.min.js"></script>
+	<script src="scripts/angular-animate.min.js"></script>
+	<script src="scripts/angular-route.min.js"></script>
+	<script src="scripts/angular-sanitize.js"></script>
+	<script src="scripts/angular-touch.min.js"></script>
+	<!--<script src="scripts/bootstrap.js"></script>-->
+	<script src="scripts/angular-ui/ui-bootstrap.min.js"></script>
+	<script src="scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+	<script src="scripts/toastr.js"></script>
+	<script src="scripts/moment.min.js"></script>
+	<script src="scripts/spin.js"></script>
+	
+	<!-- common.bootstrap Modules -->
+	<script src="app/common/bootstrap/bootstrap.dialog.js"></script>
+
+	<!-- Morris Charts JavaScript -->
+	<!--<script src="scripts/plugins/morris/raphael.min.js"></script>
+	<script src="scripts/plugins/morris/morris.min.js"></script>
+	<script src="scripts/plugins/morris/morris-data.js"></script>-->
+
+
+	<!-- Bootstrapping -->
+	<script src="app/app.js"></script>
+	<script src="app/config.js"></script>
+	<script src="app/config.exceptionHandler.js"></script>
+	<script src="app/config.route.js"></script>
+
+	<!-- common Modules -->
+	<script src="app/common/common.js"></script>
+	<script src="app/common/logger.js"></script>
+	<script src="app/common/spinner.js"></script>
+	<script src="app/services/deviceReday.js"></script>
+
+
+
+	<!-- app -->
+	<script src="scripts/index.js"></script>
+	<!--<script src="scripts/sb-admin-2.js"></script>-->
+	<script src="app/dashboard/dashboard.js"></script>
+	<script src="app/layout/shell.js"></script>
+	<script src="app/layout/sidebar.js"></script>
+	<script src="app/services/datacontext.js"></script>
+	<script src="app/layout/directives/mtSidebar.js"></script>
+	<!-- /#wrapper -->
+	<script type="text/javascript" src="cordova.js"></script>
+
+</body>
+>>>>>>> origin/master
 </html>

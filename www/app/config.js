@@ -12,7 +12,8 @@
         appErrorPrefix: '[FT Error] ', //Configure the exceptionHandler decorator
         docTitle: 'FinanceTracker: ',
         events: events,
-        version: '2.1.0'
+        version: '2.1.0',
+        navbarCollapsed: true
     };
 
     app.value('config', config);
