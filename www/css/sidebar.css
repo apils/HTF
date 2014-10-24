@@ -7,18 +7,22 @@
 	width: 100%;
 	z-index: 3;
 	overflow-y: auto; 
-	-ms-transform: translateX(0); /* IE 9 */
-   	-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
-    transform: translateX(0);
+	-ms-transform: translate3d(0,0,0); /* IE 9 */
+	-moz-transform: translate3d(0, 0, 0);
+   	-webkit-transform: translate3d(0,0,0); /* Chrome, Safari, Opera */
+    transform: translate3d(0,0,0);
     -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
+	-moz-transition: transform 0.3s ease 0;
     transition: transform 0.3s ease 0, transform 0.3s;
 }
 
 .view-content.slide-right {
-	-ms-transform: translateX(250px); /* IE 9 */
-   	-webkit-transform: translateX(250px); /* Chrome, Safari, Opera */
-    transform: translateX(250px);
+	-ms-transform: translate3d(250px,0,0); /* IE 9 */
+   	-webkit-transform: translate3d(250px,0,0); /* Chrome, Safari, Opera */
+	-moz-transform: translate3d(250px, 0, 0);
+    transform: translate3d(250px,0,0);
     -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
+	-moz-transition: transform 0.3s ease 0;
     transition: transform 0.3s ease 0, transform 0.3s;
 }
 
@@ -50,11 +54,13 @@
 		width: auto;
 	}
 	.view-content.slide-right {
-		-ms-transform: translateX(0); /* IE 9 */
-		-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
-		transform: translateX(0);
-		-webkit-transition: transform 0s ease 0, -webkit-transform 0s;  /* For Safari 3.1 to 6.0 */
-		transition: transform 0s ease 0, transform 0s;
+		-ms-transform: translate3d(0,0,0); /* IE 9 */
+		-webkit-transform: translate3d(0,0,0); /* Chrome, Safari, Opera */
+		-moz-transform: translate3d(250px, 0, 0);
+		transform: translate3d(0,0,0);
+		-webkit-transition: transform 0 ease 0, -webkit-transform 0;  /* For Safari 3.1 to 6.0 */
+		-moz-transition: transform 0 ease 0;
+		transition: transform 0 ease 0, transform 0;
 	}
 }
 /* End Sidebar fixed nav*/
