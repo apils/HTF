@@ -16,14 +16,6 @@ body {
 	height: 50px;
 }
 
-#footer {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 50px;
-}
-
 #main {
 	position: fixed;
 	bottom: 50px;
