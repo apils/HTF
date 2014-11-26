@@ -22,6 +22,7 @@
     	var logSuccess = common.logger.getLogFn('app', 'success');
     	deviceReady(function () {
     		logSuccess('Angular loaded!', null, true);
-	    });
+    	});
+
     }]);        
 })();

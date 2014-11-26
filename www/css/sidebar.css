@@ -1,39 +1,37 @@
 ﻿/* Sidebar fixed left*/
 .view-content {
 	position: absolute;
-	bottom: 0;
+	bottom: 15px;
 	top: 50px;
 	left: 0;
 	width: 100%;
 	z-index: 3;
 	overflow-y: auto; 
-	-ms-transform: translate3d(0,0,0); /* IE 9 */
-	-moz-transform: translate3d(0, 0, 0);
-   	-webkit-transform: translate3d(0,0,0); /* Chrome, Safari, Opera */
-    transform: translate3d(0,0,0);
-    -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
-	-moz-transition: transform 0.3s ease 0;
-    transition: transform 0.3s ease 0, transform 0.3s;
+	-ms-transform: translate(0,0); /* IE 9 */
+	-webkit-transform: translate(0,0); /* Chrome, Safari, Opera */
+	-moz-transform: translate(0,0);
+	transform: translate(0,0);
+    -webkit-transition: all 0.3s ease-in;  /* For Safari 3.1 to 6.0 */
+	-moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
 }
 
 .view-content.slide-right {
-	-ms-transform: translate3d(250px,0,0); /* IE 9 */
-   	-webkit-transform: translate3d(250px,0,0); /* Chrome, Safari, Opera */
-	-moz-transform: translate3d(250px, 0, 0);
-    transform: translate3d(250px,0,0);
-    -webkit-transition: transform 0.3s ease 0, -webkit-transform .3s;  /* For Safari 3.1 to 6.0 */
-	-moz-transition: transform 0.3s ease 0;
-    transition: transform 0.3s ease 0, transform 0.3s;
+	-ms-transform: translate(250px,0); /* IE 9 */
+	-webkit-transform: translate(250px,0); /* Chrome, Safari, Opera */
+	-moz-transform: translate(250px,0);
+	transform: translate(250px,0);
 }
 
 .sidebar {
 	position: absolute;
 	overflow-x: hidden;
-	bottom: 51px;
+	bottom: 0;
 	top: 51px;
 	left: 0;
 	width: 250px;
-	background-color: #cecece;
 	z-index: 0;
 }
 
@@ -54,13 +52,15 @@
 		width: auto;
 	}
 	.view-content.slide-right {
-		-ms-transform: translate3d(0,0,0); /* IE 9 */
-		-webkit-transform: translate3d(0,0,0); /* Chrome, Safari, Opera */
-		-moz-transform: translate3d(250px, 0, 0);
-		transform: translate3d(0,0,0);
-		-webkit-transition: transform 0 ease 0, -webkit-transform 0;  /* For Safari 3.1 to 6.0 */
-		-moz-transition: transform 0 ease 0;
-		transition: transform 0 ease 0, transform 0;
+		-ms-transform: translate(0,0); /* IE 9 */
+		-webkit-transform: translate(0,0); /* Chrome, Safari, Opera */
+		-moz-transform: translate(0,0);
+		transform: translate(0,0);
+		-webkit-transition: transform 0 ease-in-out;  /* For Safari 3.1 to 6.0 */
+		-moz-transition: transform 0 ease-in-out;
+		transition: transform 0 ease-in-out;
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 1000;
 	}
 }
 /* End Sidebar fixed nav*/
