@@ -7,7 +7,7 @@
     function datacontext(common) {
     	var $q = common.$q;
 
-    	var DROPBOX_APP_KEY = 'i8sa3ua7uke9af1';
+    	var dropboxAppKey = 'i8sa3ua7uke9af1';
     	var client;
     	var datastoreManager;
     	var logSuccess = common.logger.getLogFn('app', 'success');
@@ -25,11 +25,11 @@
 
 	    function activate() {
 
-	    	client = new Dropbox.Client({ key: DROPBOX_APP_KEY });
-		    client.authDriver(new Dropbox.AuthDriver.Cordova());
+	    	client = new Dropbox.Client({ key: dropboxAppKey });
+		    client.authDriver(new Dropbox.AuthDriver.Cordova( ));
 
 		    // Try to finish OAuth authorization.
-		    client.authenticate({ interactive: false }, function(error) {
+		    client.authenticate({ interactive: true }, function(error) {
 			    if (error) {
 				    logError('Dropbox authentication failed!', error, true);
 			    }
